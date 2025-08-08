@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import portfolio_logo from "../../public/portfolio_logo.png"
@@ -6,6 +8,7 @@ import profile_icon from "../../public/profile_icon.jpg"
 import { Ubuntu } from 'next/font/google'
 import { HiMiniBars2 } from "react-icons/hi2";
 import { IoMailOutline } from "react-icons/io5";
+import { AiOutlineClose } from "react-icons/ai";
 
 const ubuntu = Ubuntu({
     subsets: ["latin"],
@@ -13,11 +16,19 @@ const ubuntu = Ubuntu({
 })
 
 const Navbar = () => {
+
+    // Toggle state
+    const [toggle, setToggle] = useState(false);
+
+    const toggleMenuIcon = () => {
+        setToggle(!toggle);
+    }
+
   return (
     <nav className={`relative w-full px-[16px] py-2.5 flex flex-row justify-between items-center ${ubuntu.className}`}>
     
             <Link href={"/"}>
-                <Image src={portfolio_logo} height={1000} width={1000} alt={"logo"} className='w-[200px]'/>
+                <Image src={portfolio_logo} height={1000} width={1000} alt={"logo"} className='w-[160px] md:w-[200px]'/>
             </Link>
 
         <div className='flex flex-row gap-x-10 items-center max-lg:hidden'>
@@ -32,7 +43,11 @@ const Navbar = () => {
         </div>  
 
         <div className='text-3xl lg:hidden'>
-            <HiMiniBars2 />
+            {
+                toggle == false ? (<HiMiniBars2 className='hover:cursor-pointer' onClick={toggleMenuIcon}/>) 
+                : 
+                (<AiOutlineClose className='hover:cursor-pointer' onClick={toggleMenuIcon}/>)
+            }
         </div>
 
       
