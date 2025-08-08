@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import portfolio_logo from "../../public/portfolio_logo.png"
-import profile_icon from "../../public/profile_icon.jpg"
 import { Ubuntu } from 'next/font/google'
 import { HiMiniBars2 } from "react-icons/hi2";
 import { IoMailOutline } from "react-icons/io5";
