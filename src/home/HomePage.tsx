@@ -43,17 +43,20 @@ const HomePage = () => {
 
         <div className='mt-[100px] md:mt-[200px] flex flex-col md:flex-row justify-between gap-y-14 md:gap-y-0'>
           <div className='flex flex-row items-center max-w-[400px] w-[100%]'>
-            <Image src={profile_icon} height={1000} width={1000} className='h-[70px] w-auto rounded-full' alt={"profile"}/>
+            <Image src={profile_icon} height={1000} width={1000} className='h-[70px] w-auto rounded-full' alt={"profile"} />
             <div className='flex flex-col ml-[20px]'>
-                <p className='font-semibold text-[20px]'> Danish Khan </p>
-                <div className='flex flex-row gap-x-1 items-center'>
-                  <BsCircleFill className='text-[10px] text-green-400'/>
-                  <p className='text-xs text-gray-300'> <span className='h-[5px] w-[5px] rounded-full bg-green-500'></span> Available Now </p>
-                </div>
+              <p className='font-semibold text-[20px]'> Danish Khan </p>
+              <div className='flex flex-row gap-x-1 items-center'>
+                <BsCircleFill className='text-[10px] text-green-400' />
+                <p className='text-xs text-gray-300'> <span className='h-[5px] w-[5px] rounded-full bg-green-500'></span> Available Now </p>
+              </div>
             </div>
           </div>
 
-          <p className='text-sm text-white/80 max-w-[750px] w-[100%]'>I'm an ML engineer and frontend developer specializing in two core areas: building intelligent machine learning solutions and designing modern, high-performing web interfaces. I help businesses and teams bring their ideas to life—whether it's through data-driven models or sleek, responsive frontends that deliver great user experiences.</p>
+          <p className='text-sm text-white/80 max-w-[750px] w-[100%]'>
+            I&apos;m an ML engineer and frontend developer specializing in two core areas: building intelligent machine learning solutions and designing modern, high-performing web interfaces. I help businesses and teams bring their ideas to life—whether it&apos;s through data-driven models or sleek, responsive frontends that deliver great user experiences.
+          </p>
+
         </div>
 
       </div>
