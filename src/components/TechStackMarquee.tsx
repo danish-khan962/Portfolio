@@ -3,6 +3,7 @@ import Marquee from 'react-fast-marquee'
 import MarqueeCard from './MarqueeCard'
 import {
   SiTensorflow,
+  SiKeras,
   SiReact,
   SiTypescript,
   SiNextdotjs, SiTailwindcss,
@@ -13,10 +14,12 @@ import {
   SiJavascript,
   SiMysql,
   SiCplusplus,
+  SiGit,
 } from 'react-icons/si'
 
 const techStack = [
   { icon: <SiTensorflow />, name: "Tensorflow" },
+  { icon: <SiKeras />, name: "Keras" },
   { icon: <SiPython />, name: "Python" },
   { icon: <SiCplusplus />, name: "C++" },
   { icon: <SiMysql />, name: "MySQL" },
@@ -25,6 +28,7 @@ const techStack = [
   { icon: <SiJavascript />, name: "JavaScript" },
   { icon: <SiTailwindcss />, name: "Tailwind CSS" },
   { icon: <SiTypescript />, name: "Typescript" },
+  { icon: <SiGit />, name: "Git" },
   { icon: <SiGithub />, name: "Github" },
   { icon: <SiGooglecolab />, name: "Google Colab" },
   { icon: <SiJupyter />, name: "Jupyter Notebook" },

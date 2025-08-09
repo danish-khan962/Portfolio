@@ -7,6 +7,7 @@ import profile_icon from "../../public/profile_icon.jpg"
 import { BsCircleFill } from 'react-icons/bs'
 import { Ubuntu } from 'next/font/google'
 import TechStackMarquee from '@/components/TechStackMarquee'
+import TechStackCard from '@/components/TechStackCard'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -63,10 +64,12 @@ const HomePage = () => {
       </div>
 
       {/*  Tech stack section */}
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-full justify-center items-center'>
         <h1 className='text-xl text-white/50 font-semibold text-center'>( Tech Stack )</h1>
 
         <TechStackMarquee />
+
+        <TechStackCard />
       </div>
 
     </div>
