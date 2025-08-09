@@ -11,7 +11,6 @@ import TechStackMarquee from '@/components/TechStackMarquee'
 import TechStackCard from '@/components/TechStackCard'
 import ProjectCard from '@/components/ProjectCard'
 import { HiArrowUturnRight } from "react-icons/hi2";
-import { WobbleCard } from '@/components/ui/wobble-card'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
