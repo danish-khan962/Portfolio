@@ -8,6 +8,7 @@ import { Ubuntu } from 'next/font/google'
 import { HiMiniBars2 } from "react-icons/hi2";
 import { IoMailOutline } from "react-icons/io5";
 import { AiOutlineClose } from "react-icons/ai";
+import { LuDownload } from 'react-icons/lu'
 
 const ubuntu = Ubuntu({
     subsets: ["latin"],
@@ -38,7 +39,7 @@ const Navbar = () => {
 
         <div className='flex flex-row gap-x-4 items-center max-lg:hidden'>
             <Link href={"/contact"}> <IoMailOutline className='text-xl' /> </Link>
-            <button className='bg-white text-black font-medium py-1.5 px-6 rounded-md hover:bg-white/95 transition-all ease-in-out duration-200 cursor-pointer'> Get Started </button>
+            <button className='bg-white text-black font-medium py-1.5 px-6 rounded-md hover:bg-white/95 transition-all ease-in-out duration-200 cursor-pointer flex flex-row items-center'> Resume <span className='ml-[15px]'><LuDownload /></span> </button>
         </div>  
 
         <div className='text-3xl lg:hidden'>
