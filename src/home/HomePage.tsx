@@ -3,11 +3,15 @@ import React from 'react'
 import { Roboto } from 'next/font/google'
 import HeroSocialBar from '@/components/HeroSocialBar'
 import Image from 'next/image'
+import Link from 'next/link'
 import profile_icon from "../../public/profile_icon.jpg"
 import { BsCircleFill } from 'react-icons/bs'
 import { Ubuntu } from 'next/font/google'
 import TechStackMarquee from '@/components/TechStackMarquee'
 import TechStackCard from '@/components/TechStackCard'
+import ProjectCard from '@/components/ProjectCard'
+import { HiArrowUturnRight } from "react-icons/hi2";
+import { WobbleCard } from '@/components/ui/wobble-card'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -72,6 +76,28 @@ const HomePage = () => {
         <TechStackCard />
       </div>
 
+
+      {/* Recent Works - (projects) */}
+      <div className='relative'>
+        <div className='flex flex-col md:flex-row gap-y-3 md:gap-y-0 justify-between items-baseline'>
+          <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px]`}> <span className='text-white/70'> Recent </span> Works. </h1>
+          <h1 className='text-xl text-white/50 font-semibold'>( Project )</h1>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1'>
+          <ProjectCard />
+          <ProjectCard />
+        </div>
+
+        <div className='w-full flex justify-center items-center'>
+          <Link href={"/projects"}>
+            <button className='mt-[10px] text-lg font-semibold bg-white text-black py-2 px-10 rounded-full hover:cursor-pointer hover:bg-white/90 flex flex-row items-center'> View All Projects <span className='ml-[25px]'><HiArrowUturnRight className='font-semibold' /></span> </button>
+          </Link>
+        </div>
+      </div>
+
+
+      {/* Services Section */}
     </div>
   )
 }
