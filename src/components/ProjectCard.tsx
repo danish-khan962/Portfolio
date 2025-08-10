@@ -1,6 +1,4 @@
 import React from 'react'
-// import background_image_1 from "../../public/bg-image1.jpg"
-import background_image_2 from "../../public/bg-image2.jpg"
 import Image from 'next/image'
 import Link from 'next/link'
 import { Ubuntu } from 'next/font/google'

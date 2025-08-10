@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="md:max-w-96">
                     <Image src={portfolio_logo} alt="" height={1000} width={1000} className='h-[25px] w-auto'/>
                     <p className="mt-6 text-sm">
-                         Thanks for stopping by! I'm a <span className='text-black bg-green-400/80 py-0.5 px-1 rounded'>Machine Learning Engineer</span> and <span className='text-black bg-green-400/80 py-0.5 px-1 rounded'>Frontend Developer</span> who enjoys turning data into insights and code into clean interfaces. Let's connect: <a href="mailto:dk831675@gmail.com" className="text-blue-600 underline">dk831675@gmail.com</a>.
+                         Thanks for stopping by! I&apos;m a <span className='text-black bg-green-400/80 py-0.5 px-1 rounded'>Machine Learning Engineer</span> and <span className='text-black bg-green-400/80 py-0.5 px-1 rounded'>Frontend Developer</span> who enjoys turning data into insights and code into clean interfaces. Let&apos;s connect: <a href="mailto:dk831675@gmail.com" className="text-blue-600 underline">dk831675@gmail.com</a>.
                     </p>
                     <HeroSocialBar />
                 </div>
