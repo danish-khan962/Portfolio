@@ -16,8 +16,15 @@ import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 import customer_icon_1 from "../../public/customer_icon_1.jpg"
 import customer_icon_2 from "../../public/customer_icon_2.jpg"
 import customer_icon_3 from "../../public/customer_icon_3.jpg"
+import { Tilt_Warp } from 'next/font/google'
+import { FaLocationArrow } from "react-icons/fa";
 
 const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["400"]
+})
+
+const tilt_wrap = Tilt_Warp({
   subsets: ["latin"],
   weight: ["400"]
 })
@@ -132,6 +139,21 @@ const HomePage = () => {
           ]}
           autoplay={true}
         />
+      </div>
+
+      {/* Contact Me section */}
+      <div className={`relative flex flex-row justify-center items-center my-[60px] md:my-[120px] ${tilt_wrap.className} text-gray-300 bg-[#212121] py-[45px] rounded-3xl group`}>
+        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>C</span>
+        <span className='text-6xl md:text-7xl skew-3 -translate-y-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>O</span>
+        <span className='text-6xl md:text-7xl -skew-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>N</span>
+        <span className='text-6xl md:text-7xl -translate-y-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>T</span>
+        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>A</span>
+        <span className='text-6xl md:text-7xl -skew-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>C</span>
+        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>T</span>
+
+        <Link href={"/contact"}>
+          <FaLocationArrow className='text-4xl md:text-6xl text-blue-400/70 ml-[30px] md:ml-0 md:absolute md:left-[50%] md:right-[50%] md:bottom-[30%] md:opacity-0 md:group-hover:opacity-100 transition-all ease-in-out duration-300' />
+        </Link>
       </div>
 
     </div>
