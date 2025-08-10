@@ -26,16 +26,16 @@ const Footer = () => {
                     <div>
                         <h2 className="font-semibold mb-5">Pages</h2>
                         <ul className="text-sm space-y-2">
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/about">About Me</Link></li>
-                            <li><Link href="/projects">Projects</Link></li>
-                            <li><Link href="/contact">Contact Me</Link></li>
+                            <li><Link href="/"  className='hover:underline'>Home</Link></li>
+                            <li><Link href="/about" className='hover:underline'>About Me</Link></li>
+                            <li><Link href="/projects" className='hover:underline'>Projects</Link></li>
+                            <li><Link href="/contact" className='hover:underline'>Contact Me</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h2 className="font-semibold mb-5">Get in touch</h2>
                         <div className="text-sm space-y-2">
-                            <Link href={"mailto:dk831675@gmail.com"}>dk831675@gmail.com</Link>
+                            <Link href={"mailto:dk831675@gmail.com"} className='hover:underline'>dk831675@gmail.com</Link>
                         </div>
                     </div>
                 </div>

@@ -142,7 +142,7 @@ const HomePage = () => {
       </div>
 
       {/* Contact Me section */}
-      <div className={`relative flex flex-row justify-center items-center my-[60px] md:my-[120px] ${tilt_wrap.className} text-gray-300 bg-[#212121] py-[45px] rounded-3xl group`}>
+      <div className={`relative flex flex-row justify-center items-center my-[60px] md:my-[120px] ${tilt_wrap.className} text-gray-300 bg-[#121212] border-4 border-white/10 py-[45px] rounded-3xl group`}>
         <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>C</span>
         <span className='text-6xl md:text-7xl skew-3 -translate-y-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>O</span>
         <span className='text-6xl md:text-7xl -skew-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>N</span>
