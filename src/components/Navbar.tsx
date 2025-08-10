@@ -32,6 +32,14 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        if (toggle) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [toggle]);
+
     const toggleMenuIcon = () => {
         setToggle(!toggle);
     }
