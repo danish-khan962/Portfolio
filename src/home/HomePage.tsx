@@ -11,6 +11,7 @@ import TechStackMarquee from '@/components/TechStackMarquee'
 import TechStackCard from '@/components/TechStackCard'
 import ProjectCard from '@/components/ProjectCard'
 import { HiArrowUturnRight } from "react-icons/hi2";
+import ServiceCard from '@/components/ServiceCard'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -96,6 +97,11 @@ const HomePage = () => {
 
 
       {/* Services Section */}
+      <div className='realtive my-[50px] md:my-[100px]'>
+        <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px] mb-[40px] md:mb-[80px]`}> Services. </h1>
+        <ServiceCard />
+      </div>
+
     </div>
   )
 }

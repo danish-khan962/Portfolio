@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import portfolio_logo from "../../public/portfolio_logo.png"
@@ -15,7 +15,23 @@ const ubuntu = Ubuntu({
     weight: ["400"]
 })
 
+
 const Navbar = () => {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Toggle state
     const [toggle, setToggle] = useState(false);
@@ -24,35 +40,60 @@ const Navbar = () => {
         setToggle(!toggle);
     }
 
-  return (
-    <nav className={`relative w-full px-[16px] py-2.5 flex flex-row justify-between items-center ${ubuntu.className}`}>
-    
+    // useEffect(() => {
+    //     if (toggle) {
+    //         document.body.classList.add('overflow-hidden');
+    //     } else {
+    //         document.body.classList.remove('overflow-hidden');
+    //     }
+    //     return () => {
+    //         document.body.classList.remove('overflow-hidden');
+    //     };
+    // }, [toggle]);
+
+    return (
+        <nav className={`fixed top-0 left-0 w-full z-50 px-[16px] py-2.5 flex flex-row justify-between items-center transition-all duration-300 ease-in-out ${scrolled
+            ? 'bg-white/10 backdrop-blur-md'
+            : 'bg-black'
+            } ${ubuntu.className}`}>
             <Link href={"/"}>
-                <Image src={portfolio_logo} height={1000} width={1000} alt={"logo"} className='w-[160px] md:w-[200px]'/>
+                <Image src={portfolio_logo} height={1000} width={1000} alt={"logo"} className='w-[160px] md:w-[200px]' />
             </Link>
 
-        <div className='flex flex-row gap-x-10 items-center max-lg:hidden'>
-            <Link href={"/"} className='hover:text-white/95 transition-all ease-in-out duration-200 '> Home </Link> 
-            <Link href={"/projects"} className='hover:text-white/95 transition-all ease-in-out duration-200 '> Projects </Link>
-            <Link href={"/about"} className='hover:text-white/95 transition-all ease-in-out duration-200 '> About </Link>
-        </div>
+            <div className='flex flex-row gap-x-10 items-center max-lg:hidden'>
+                <Link href={"/"} className='hover:text-white/70 transition-all ease-in-out duration-200'> Home </Link>
+                <Link href={"/projects"} className='hover:text-white/70 transition-all ease-in-out duration-200'> Projects </Link>
+                <Link href={"/about"} className='hover:text-white/70 transition-all ease-in-out duration-200'> About </Link>
+            </div>
 
-        <div className='flex flex-row gap-x-4 items-center max-lg:hidden'>
-            <Link href={"/contact"}> <IoMailOutline className='text-xl' /> </Link>
-            <button className='bg-white text-black font-medium py-1.5 px-6 rounded-md hover:bg-white/95 transition-all ease-in-out duration-200 cursor-pointer flex flex-row items-center'> Resume <span className='ml-[15px]'><LuDownload /></span> </button>
-        </div>  
+            <div className='flex flex-row gap-x-4 items-center max-lg:hidden'>
+                <Link href={"/contact"}> <IoMailOutline className='text-xl' /> </Link>
+                <button className='bg-white text-black font-medium py-1.5 px-6 rounded-md hover:bg-white/95 transition-all ease-in-out duration-200 cursor-pointer flex flex-row items-center'> Resume <span className='ml-[15px]'><LuDownload /></span> </button>
+            </div>
 
-        <div className='text-3xl lg:hidden'>
-            {
-                toggle == false ? (<HiMiniBars2 className='hover:cursor-pointer' onClick={toggleMenuIcon}/>) 
-                : 
-                (<AiOutlineClose className='hover:cursor-pointer' onClick={toggleMenuIcon}/>)
-            }
-        </div>
+            <div className='text-3xl lg:hidden'>
+                {
+                    toggle == false ? (<HiMiniBars2 className='hover:cursor-pointer' onClick={toggleMenuIcon} />)
+                        :
+                        (<AiOutlineClose className='hover:cursor-pointer' onClick={toggleMenuIcon} />)
+                }
+            </div>
 
-      
-    </nav>
-  )
+            {/* {toggle && (
+               <div className="fixed top-12 left-0 w-full h-full z-30 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center gap-y-10 lg:hidden transition-all duration-300 ease-in-out">
+                    <Link href={"/"} className='text-white text-2xl hover:text-white/70 transition-all' onClick={toggleMenuIcon}>Home</Link>
+                    <Link href={"/projects"} className='text-white text-2xl hover:text-white/70 transition-all' onClick={toggleMenuIcon}>Projects</Link>
+                    <Link href={"/about"} className='text-white text-2xl hover:text-white/70 transition-all' onClick={toggleMenuIcon}>About</Link>
+                    <Link href={"/contact"} className='text-white text-2xl hover:text-white/70 transition-all' onClick={toggleMenuIcon}>Contact</Link>
+                    <button className='bg-white text-black font-medium py-2 px-8 rounded-md hover:bg-white/90 transition-all flex flex-row items-center' onClick={toggleMenuIcon}>
+                        Resume <span className='ml-3'><LuDownload /></span>
+                    </button>
+                </div>
+            )} */}
+
+
+        </nav>
+    )
 }
 
 export default Navbar
