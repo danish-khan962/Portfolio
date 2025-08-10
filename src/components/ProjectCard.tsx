@@ -24,7 +24,7 @@ const ProjectCard = () => {
       {projectDetails.map((project) => (
         <div className={`max-w-[700px] w-[100%] my-[40px] md:my-[80px] ${ubuntu.className} group`} key={project.id}>
           <div>
-            <Link href={`/project`}>
+            <Link href={`/project/${project.id}`}>
               <Image src={project.background_banner} alt={"bg"} height={1000} width={1000} className='h-[350px] w-full bg-center rounded-lg' loading={"lazy"} />
             </Link>
           </div>
@@ -33,7 +33,7 @@ const ProjectCard = () => {
               <p className='font-semibold text-sm mt-4 text-gray-300/75 group-hover:translate-x-7 transition-all ease-in-out duration-300'> {project.date} </p>
               <p className={`text-3xl md:text-4xl font-semibold mt-[20px] md:mt-[30px] ${roboto.className} group-hover:translate-x-7 transition-all ease-in-out duration-300 group-hover:text-blue-400`}>{project.name}</p>
             </div>
-            <Link href={"/project"}><FaArrowUpRightFromSquare className='block md:hidden md:group-hover:block text-2xl text-gray-300/70 hover:text-blue-100 transition-all ease-in-out duration-200 cursor-pointer' /></Link>
+            <Link href={`/project/${project.id}`}><FaArrowUpRightFromSquare className='block md:hidden md:group-hover:block text-2xl text-gray-300/70 hover:text-blue-100 transition-all ease-in-out duration-200 cursor-pointer' /></Link>
           </div>
         </div>
       ))}

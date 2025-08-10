@@ -12,6 +12,10 @@ import TechStackCard from '@/components/TechStackCard'
 import ProjectCard from '@/components/ProjectCard'
 import { HiArrowUturnRight } from "react-icons/hi2";
 import ServiceCard from '@/components/ServiceCard'
+import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
+import customer_icon_1 from "../../public/customer_icon_1.jpg"
+import customer_icon_2 from "../../public/customer_icon_2.jpg"
+import customer_icon_3 from "../../public/customer_icon_3.jpg"
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -97,9 +101,37 @@ const HomePage = () => {
 
 
       {/* Services Section */}
-      <div className='realtive my-[50px] md:my-[100px]'>
+      <div className='relative my-[50px] md:my-[100px]'>
         <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px] mb-[40px] md:mb-[80px]`}> Services. </h1>
         <ServiceCard />
+      </div>
+
+      {/* Testimonials */}
+      <div className='relative my-[40px] md:mt-[80px]'>
+        <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px] mb-[40px] md:mb-[80px]`}> Testimonals. </h1>
+        <AnimatedTestimonials
+          testimonials={[
+            {
+              quote: "This is an amazing product. Highly recommend!",
+              name: "Jane Doe",
+              designation: "CEO at Example Corp",
+              src: customer_icon_1,
+            },
+            {
+              quote: "Great experience from start to finish.",
+              name: "John Smith",
+              designation: "Product Manager at Tech Co",
+              src: customer_icon_2,
+            },
+            {
+              quote: "The best service I've ever used!",
+              name: "Alice Johnson",
+              designation: "Freelancer",
+              src: customer_icon_3,
+            },
+          ]}
+          autoplay={true}
+        />
       </div>
 
     </div>
