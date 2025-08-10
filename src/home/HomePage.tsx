@@ -119,21 +119,21 @@ const HomePage = () => {
         <AnimatedTestimonials
           testimonials={[
             {
-              quote: "This is an amazing product. Highly recommend!",
-              name: "Jane Doe",
-              designation: "CEO at Example Corp",
+              quote: "Thanks to the incredible Hospital Management System built in core Python with integrated MySQL, I scored over 9 in my subject! Truly impressed with the dedication and technical skill.",
+              name: "Abhinav Singh",
+              designation: "Student at Sharda University",
               src: customer_icon_1,
             },
             {
-              quote: "Great experience from start to finish.",
-              name: "John Smith",
-              designation: "Product Manager at Tech Co",
+              quote: "The deep learning model built for analyzing sound behaviors using TensorFlow was top-notch. Very professional and technically sound work – made my data analysis task a breeze!",
+              name: "Subhasri Pushpanathan",
+              designation: "Data Analyst - TCS",
               src: customer_icon_2,
             },
             {
-              quote: "The best service I've ever used!",
-              name: "Alice Johnson",
-              designation: "Freelancer",
+              quote: "I was amazed by the speed and quality — the entire frontend for my startup 'Admatrica' was built in just 3 days! Super reliable and skilled.",
+              name: "Kunal Khandelwal",
+              designation: "Founder - Unweb Tech.",
               src: customer_icon_3,
             },
           ]}
