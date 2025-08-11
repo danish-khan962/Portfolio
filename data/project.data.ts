@@ -1,8 +1,10 @@
 // Local API for projects details
 import background_image_1 from "../public/bg-image1.jpg"
 import background_image_2 from "../public/bg-image2.jpg"
+import background_image_3 from "../public/bg-image3.jpg"
 import genpod_image from "../public/genpod-ai_image.png"
 import portfolio_image from "../public/portfolio_image.png"
+import diabease_image from "../public/diabease_image.png"
 import { StaticImageData } from "next/image"
 
 export interface ProjectDetail {
@@ -51,6 +53,23 @@ export const projectDetails = [
             "Acertainity UI",
             "Personal Portfolio",
             "Responsive Design"
+        ]
+    },
+    {
+        id: "8f278f43-5fe3-4c80-a3de-e044bfbe73d7",
+        name: "Diabease",
+        date: "Feburary 25, 2025",
+        author: "Danish Khan",
+        live_link: "https://diabease-systems.vercel.app/",
+        github_link: "https://github.com/danish-khan962/DiabEase",
+        img: diabease_image,
+        background_banner: background_image_3,
+        description: "Diabease is a diabetes prediction web application designed to assess whether a user is likely to have diabetes based on key medical inputs. The frontend is built using React, offering a smooth and responsive user experience, while the backend is powered by Django, which hosts and serves the machine learning model responsible for making predictions. This system integrates healthcare data processing with intelligent analytics, making it a useful tool for early risk detection. Diabease focuses on usability, performance, and accuracy, providing real-time results in a clean and accessible interface.",
+        tags: [
+            "Machine Learning",
+            "UI",
+            "Django",
+            "Healthcare"
         ]
     },
 ]

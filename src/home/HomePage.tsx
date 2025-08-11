@@ -18,6 +18,7 @@ import customer_icon_2 from "../../public/customer_icon_2.jpg"
 import customer_icon_3 from "../../public/customer_icon_3.jpg"
 import { Tilt_Warp } from 'next/font/google'
 import { FaLocationArrow } from "react-icons/fa";
+import { projectDetails } from '../../data/project.data'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -96,10 +97,10 @@ const HomePage = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1'>
-          <ProjectCard />
+          <ProjectCard projects={projectDetails.slice(0, 2)}/>
         </div>
 
-        <div className='w-full flex justify-center items-center'>
+        <div className='w-full flex justify-center items-center mt-[50px] md:mt-[100px]'>
           <Link href={"/projects"}>
             <button className='mt-[10px] text-lg font-semibold bg-white text-black py-2 px-10 rounded-full hover:cursor-pointer hover:bg-white/90 flex flex-row items-center'> View All Projects <span className='ml-[25px]'><HiArrowUturnRight className='font-semibold' /></span> </button>
           </Link>

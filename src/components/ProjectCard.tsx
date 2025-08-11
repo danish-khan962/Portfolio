@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { Ubuntu } from 'next/font/google'
 import { Roboto } from 'next/font/google'
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { projectDetails } from '../../data/project.data'
+import { ProjectDetail, projectDetails } from '../../data/project.data'
+
+
+interface ProjectCardProps {
+  projects: ProjectDetail[]
+}
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -16,11 +21,11 @@ const roboto = Roboto({
   weight: ["400"]
 })
 
-const ProjectCard = () => {
+const ProjectCard: React.FC<ProjectCardProps> = ({projects}) => {
   return (
     <>
-      {projectDetails.map((project) => (
-        <div className={`max-w-[700px] w-[100%] my-[40px] md:my-[80px] ${ubuntu.className} group`} key={project.id}>
+      {projects.map((project) => (
+        <div className={`max-w-[700px] w-[100%] mt-[40px] md:mt-[80px] ${ubuntu.className} group`} key={project.id}>
           <div className="relative h-[350px] w-full rounded-lg overflow-hidden bg-black/10">
             <Link href={`/project/${project.id}`}>
               <Image
