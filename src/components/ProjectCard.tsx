@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projects}) => {
       {projects.map((project) => (
         <div className={`max-w-[700px] w-[100%] mt-[40px] md:mt-[80px] ${ubuntu.className} group`} key={project.id}>
           <div className="relative h-[350px] w-full rounded-lg overflow-hidden bg-black/10">
-            <Link href={`/project/${project.id}`}>
+            <Link href={`/projects/project/${project.id}`}>
               <Image
               src={project.background_banner}
               alt="bg"
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projects}) => {
               <p className='font-semibold text-sm mt-4 text-gray-300/75 group-hover:translate-x-7 transition-all ease-in-out duration-300'> {project.date} </p>
               <p className={`text-3xl md:text-4xl font-semibold mt-[20px] md:mt-[30px] ${roboto.className} group-hover:translate-x-7 transition-all ease-in-out duration-300 group-hover:text-blue-400`}>{project.name}</p>
             </div>
-            <Link href={`/project/${project.id}`}><FaArrowUpRightFromSquare className='block md:hidden md:group-hover:block text-2xl text-gray-300/70 hover:text-blue-100 transition-all ease-in-out duration-200 cursor-pointer' /></Link>
+            <Link href={`/projects/project/${project.id}`}><FaArrowUpRightFromSquare className='block md:hidden md:group-hover:block text-2xl text-gray-300/70 hover:text-blue-100 transition-all ease-in-out duration-200 cursor-pointer' /></Link>
           </div>
         </div>
       ))}
