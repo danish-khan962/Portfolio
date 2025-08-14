@@ -100,7 +100,7 @@ const page = () => {
           <p className='text-sm text-white/80 md:w-[70%] mt-[30px] md:mt-[60px]'>I combine intelligent systems with clean frontend execution—helping modern brands build scalable, high-converting digital products without the bloat.</p>
 
           <Link href={"/contact"}>
-            <button className='mt-[20px] md:mt-[40px] py-1.5 px-8 bg-[#121212]/50 border-2 border-white/10 rounded-lg cursor-pointer backdrop-blur-md hover:border-white/20 transition-all ease-in-out duration-300'>Let's connect</button>
+            <button className='mt-[20px] md:mt-[40px] py-1.5 px-8 bg-[#121212]/50 border-2 border-white/10 rounded-lg cursor-pointer backdrop-blur-md hover:border-white/20 transition-all ease-in-out duration-300'>Let&apos;s connect</button>
           </Link>
         </div>
       </div>
