@@ -45,7 +45,7 @@ const HomePage = () => {
         <ProfileCard />
 
         <div className='flex flex-col mt-[50px] md:mt-0 md:ml-[70px] lg:ml-[100px] max-w-[650px] w-[100%]s'>
-          <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px]`}>Merging Smart Machines with - <span className='text-white/70'> Seamless User Interfaces. </span></h1>
+          <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px]`}>Merging Smart Machines with - <span className='text-white/80'> Seamless User Interfaces. </span></h1>
 
           <HeroSocialBar />
         </div>
@@ -57,7 +57,7 @@ const HomePage = () => {
 
         <h1 className='text-xl text-white/50 font-semibold text-center'>( About )</h1>
 
-        <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px]`}> Crafting Conversion-Focused <span className='text-white/70'> Designs That Drive Real Results. </span> </h1>
+        <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px]`}> <span className='text-white/80'>Crafting</span> Conversion-Focused <span className='text-white/80'> Designs That Drive Real Results. </span> </h1>
 
         <div className='mt-[100px] md:mt-[200px] flex flex-col md:flex-row justify-between gap-y-14 md:gap-y-0'>
           <div className='flex flex-row items-center max-w-[400px] w-[100%]'>

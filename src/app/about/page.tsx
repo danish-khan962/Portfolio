@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import { BsCircleFill } from 'react-icons/bs'
-import profile_icon from "../../../public/profile_icon.jpg"
 import { Roboto } from 'next/font/google'
 import HeroSocialBar from '@/components/HeroSocialBar'
 import ProfileCard from '@/components/ProfileCard'
@@ -21,7 +18,7 @@ const page = () => {
         </div>
 
         <div className='max-w-[550px] w-[100%]'>
-          <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] mt-[40px] md:mt-0`}> Crafting Conversion-Focused <span className='text-white/70'> Designs That Drive Real Results. </span> </h1>
+          <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] mt-[40px] md:mt-0`}> <span className='text-white/80'>Crafting</span> Conversion-Focused <span className='text-white/80'> Designs That Drive Real Results. </span> </h1>
 
           <p className='text-sm text-white/80 max-w-[550px] w-[100%] mt-[30px] md:mt-[60px]'>
             I&apos;m an ML engineer and frontend developer specializing in two core areas: building intelligent machine   learning solutions and designing modern, high-performing web interfaces. I help businesses and teams bring  their ideas to life—whether it&apos;s through data-driven models or sleek, responsive frontends that deliver   great user experiences.
