@@ -1,9 +1,9 @@
-import React from 'react'
 import { projectDetails } from '../../../../../data/project.data'
 import Link from 'next/link'
 import { Ubuntu, Roboto } from 'next/font/google'
-import { GrHomeRounded, GrProjects } from "react-icons/gr";
+import { GrHomeRounded, GrProjects } from "react-icons/gr"
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 // Fonts
 const ubuntu = Ubuntu({
@@ -16,16 +16,10 @@ const roboto = Roboto({
   weight: ["400"]
 })
 
-interface Props {
-  params: {
-    id: string
-  }
-}
+export default function Page({ params }: { params: { id: string } }) {
+  const { id } = params
 
-const page = ({ params }: { params: { id: string } }) => {
-  const { id } = params;
-
-  const project = projectDetails.find((p) => p.id === id);
+  const project = projectDetails.find((p) => p.id === id)
 
   if (!project) {
     return (
@@ -44,7 +38,6 @@ const page = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className={`${ubuntu.className} relative px-4`}>
-
       <div className='w-full flex justify-center items-center'>
         <div className='max-w-[700px] w-[100%] flex flex-row justify-between items-center mt-[100px]'>
           <h1 className={`${roboto.className} text-4xl md:text-5xl text-center text-white/60  uppercase`}>{project.name}</h1>
@@ -58,8 +51,6 @@ const page = ({ params }: { params: { id: string } }) => {
       {/* Project image */}
       <div className="flex justify-center items-center">
         <div className={`${ubuntu.className} relative max-w-[700px] w-full mt-[30px] md:mt-[60px] group overflow-hidden`}>
-
-          {/* Background Image */}
           <Image
             src={project.background_banner}
             alt="Background"
@@ -69,7 +60,6 @@ const page = ({ params }: { params: { id: string } }) => {
             loading="lazy"
           />
 
-          {/* Overlay Image */}
           <div className="absolute top-6 left-1/2 w-[85%] md:w-[70%] -translate-x-1/2 rounded-lg shadow-xl transition-all duration-200 ease-in-out group-hover:scale-95">
             <Image
               src={project.img}
@@ -86,7 +76,6 @@ const page = ({ params }: { params: { id: string } }) => {
       {/* Links */}
       <div className='relative w-full flex justify-center items-center mt-[20px] md:mt-[40px]'>
         <div className='max-w-[700px] w-[100%] flex flex-row justify-between items-center gap-x-3'>
-
           <div className='w-[50%]'>
             <Link href={project.github_link} target='_blank'>
               <button className='bg-blue-400/10 py-2 px-8 rounded-lg w-[100%]  backdrop-blur-md border-2 border-white/10 hover:border-white/15 transition-all ease-in-out duration-200 cursor-pointer'> Repository </button>
@@ -116,9 +105,6 @@ const page = ({ params }: { params: { id: string } }) => {
           ))}
         </div>
       </div>
-
     </div>
   )
 }
-
-export default page
