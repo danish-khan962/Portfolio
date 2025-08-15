@@ -16,15 +16,12 @@ const roboto = Roboto({
   weight: ["400"]
 })
 
-interface PageProps {
-  params: {
-    id: string
-  }
-}
 
-export default function Page({ params }: PageProps) {
-  const { id } = params
+export default async function Page({params,}: {params: Promise<{ id: string }>}) {
+
+  const { id } = await params
   const project = projectDetails.find((p) => p.id === id)
+
 
   if (!project) {
     return (
@@ -126,8 +123,9 @@ export default function Page({ params }: PageProps) {
 }
 
 
+
 export async function generateStaticParams() {
   return projectDetails.map((project) => ({
     id: project.id,
-  }));
+  }))
 }
