@@ -77,7 +77,7 @@ const Navbar = () => {
                         : <AiOutlineClose className='hover:cursor-pointer' onClick={toggleMenuIcon} />
                 }
             </div>
-            <div className={`fixed top-0 left-0 w-full h-screen bg-white/10 backdrop-blur-md flex flex-col items-center justify-center gap-10 text-white text-xl transition-all duration-300 ease-in-out lg:hidden z-40 ${toggle ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'}`}>
+            <div className={`fixed top-0 left-0 w-full h-screen bg-white/10 backdrop-blur-md flex flex-col items-center justify-center gap-10 text-white text-xl transition-all duration-300 ease-in-out lg:hidden z-40 ${toggle ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'} ${scrolled ? "bg-white/10" : "bg-white/10"}`}>
                 <Link href={"/"} onClick={() => setToggle(false)} className='hover:text-white/70 transition-all ease-in-out duration-200'> Home </Link>
                 <Link href={"/projects"} onClick={() => setToggle(false)} className='hover:text-white/70 transition-all ease-in-out duration-200'> Projects </Link>
                 <Link href={"/about"} onClick={() => setToggle(false)} className='hover:text-white/70 transition-all ease-in-out duration-200'> About </Link>
