@@ -22,7 +22,7 @@ interface Props {
   }
 }
 
-const page = ({ params }: Props) => {
+const page = ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
   const project = projectDetails.find((p) => p.id === id);
