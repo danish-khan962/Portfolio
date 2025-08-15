@@ -16,7 +16,13 @@ const roboto = Roboto({
   weight: ["400"]
 })
 
-export default function Page({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string
+  }
+}
+
+export default function Page({ params }: PageProps) {
   const { id } = params
   const project = projectDetails.find((p) => p.id === id)
 
@@ -117,4 +123,11 @@ export default function Page({ params }: { params: { id: string } }) {
       </div>
     </div>
   )
+}
+
+
+export async function generateStaticParams() {
+  return projectDetails.map((project) => ({
+    id: project.id,
+  }));
 }
