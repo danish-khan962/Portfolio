@@ -13,9 +13,9 @@ import ProjectCard from '@/components/ProjectCard'
 import { HiArrowUturnRight } from "react-icons/hi2";
 import ServiceCard from '@/components/ServiceCard'
 import { Tilt_Warp } from 'next/font/google'
-import { FaLocationArrow } from "react-icons/fa";
 import { projectDetails } from '../../data/project.data'
 import Testimonials from '@/components/Testimonials'
+import ContactForm from '@/components/ContactForm'
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -117,18 +117,9 @@ const HomePage = () => {
       </div>
 
       {/* Contact Me section */}
-      <div className={`relative flex flex-row justify-center items-center my-[60px] md:my-[120px] ${tilt_wrap.className} text-gray-300 bg-[#121212] border-4 border-white/10 py-[45px] rounded-3xl group`}>
-        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>C</span>
-        <span className='text-6xl md:text-7xl skew-3 -translate-y-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>O</span>
-        <span className='text-6xl md:text-7xl -skew-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>N</span>
-        <span className='text-6xl md:text-7xl -translate-y-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>T</span>
-        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>A</span>
-        <span className='text-6xl md:text-7xl -skew-2 md:group-hover:opacity-5 transition-all ease-in-out duration-200'>C</span>
-        <span className='text-6xl md:text-7xl md:group-hover:opacity-5 transition-all ease-in-out duration-200'>T</span>
-
-        <Link href={"/contact"}>
-          <FaLocationArrow className='text-4xl md:text-6xl text-blue-400/70 ml-[30px] md:ml-0 md:absolute md:left-[50%] md:right-[50%] md:bottom-[30%] md:opacity-0 md:group-hover:opacity-100 transition-all ease-in-out duration-300' />
-        </Link>
+      <div className={`relative my-[60px] md:my-[120px]`}>
+        <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px]`}> Contact. </h1>
+        <ContactForm />
       </div>
 
     </div>

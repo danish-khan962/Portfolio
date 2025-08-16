@@ -13,7 +13,7 @@ const roboto = Roboto({
 const Testimonials = () => {
   return (
     <div className='relative'>
-      <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px] mb-[40px] md:mb-[80px]`}> Testimonals. </h1>
+      <h1 className={`${roboto.className} text-3xl md:text-4xl lg:text-5xl md:leading-[54px] max-w-[800px] w-[100%] mt-[60px] md:mt-[80px] mb-[40px] md:mb-[80px]`}> Testimonials. </h1>
         <AnimatedTestimonials
           testimonials={[
             {
