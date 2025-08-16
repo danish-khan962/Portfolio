@@ -5,6 +5,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["400"]
+})
 
 type Testimonial = {
   quote: string;
@@ -56,11 +62,11 @@ export const AnimatedTestimonials = ({
   }
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-10 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className={`${ubuntu.className} mx-auto max-w-sm px-4 py-10 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12`}>
       <div className="relative grid grid-cols-1 gap-x-20 gap-y-4 md:grid-cols-2">
         {/* Image side */}
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-65 md:h-80 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -121,7 +127,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-white/80">
+            <motion.p className="mt-8 text-sm md:text-lg text-white/80">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

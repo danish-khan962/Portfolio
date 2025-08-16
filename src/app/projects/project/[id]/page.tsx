@@ -86,14 +86,14 @@ export default async function Page({params,}: {params: Promise<{ id: string }>})
         <div className='max-w-[700px] w-[100%] flex flex-row justify-between items-center gap-x-3'>
           <div className='w-[50%]'>
             <Link href={project.github_link} target='_blank'>
-              <button className='bg-blue-400/10 py-2 px-8 rounded-lg w-[100%]  backdrop-blur-md border-2 border-white/10 hover:border-white/15 transition-all ease-in-out duration-200 cursor-pointer'>
+              <button className='bg-gradient-to-r from-blue-600 via-sky-600 to-cyan-500 text-white py-2 px-8 rounded-lg w-full backdrop-blur-md transition-all ease-in-out duration-200 cursor-pointer hover:from-blue-700 hover:via-sky-700 hover:to-cyan-600'>
                 Repository
               </button>
             </Link>
           </div>
           <div className='w-[50%]'>
             <Link href={project.live_link} target='_blank'>
-              <button className='bg-blue-400/10 py-2 px-8 rounded-lg w-[100%] backdrop-blur-md border-2 border-white/10 hover:border-white/15 transition-all ease-in-out duration-200 cursor-pointer'>
+              <button className='bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-500 py-2 px-8 rounded-lg w-[100%] backdrop-blur-md transition-all ease-in-out duration-200 cursor-pointer hover:from-teal-500 hover:via-blue-600 hover:to-indigo-600'>
                 Watch Live
               </button>
             </Link>
